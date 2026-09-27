@@ -22,7 +22,14 @@
 		</h1>
 
 		<Typewriter
-			phrases={['Full Stack Developer', 'Svelte Enthusiast', 'Tech Enthusiast', 'Coder...']}
+			phrases={[
+				'Full Stack Developer',
+				'Svelte Enthusiast',
+				'Electrical Engineer',
+				'Problem Solver',
+				'Tech Enthusiast',
+				'Coder...'
+			]}
 		/>
 
 		<div
