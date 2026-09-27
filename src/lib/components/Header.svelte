@@ -2,6 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import Ico from '$components/Ico.svelte';
 	import { getTheme } from '$lib/theme.svelte';
+	import { page } from '$app/state';
 
 	const theme = getTheme();
 
@@ -18,6 +19,14 @@
 
 	function MenuHandler() {
 		isOpen = !isOpen;
+	}
+
+	function isItemActive(href: string): boolean {
+		const currentPath = page.url?.pathname || '';
+		if (href === '/') {
+			return currentPath === '/';
+		}
+		return currentPath === href || currentPath.startsWith(`${href}/`);
 	}
 </script>
 
@@ -66,12 +75,21 @@
 						<div class="bg-white dark:bg-black z-10 w-[100vw]">
 							<div class="flex flex-col gap-4 w-[90vw] mx-auto">
 								{#each MenuItems as item}
+									{@const active = isItemActive(item.href)}
 									<a
-										class="flex items-center gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 hover:bg-white/10 transition-colors border border-black/5 dark:border-white/5 no-underline text-black dark:text-white"
+										class="flex items-center gap-4 p-4 rounded-2xl transition-all border no-underline {active
+											? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white font-semibold shadow-md'
+											: 'bg-black/5 dark:bg-white/5 hover:bg-white/10 border-black/5 dark:border-white/5 text-black dark:text-white'}"
 										href={item.href}
 										onclick={() => (isOpen = false)}
+										aria-current={active ? 'page' : undefined}
 									>
-										<Ico class="w-6 h-6 invert dark:invert-0 fill-black opacity-80" name={item.name} />
+										<Ico
+											class="w-6 h-6 {active
+												? 'invert-0 dark:invert'
+												: 'invert dark:invert-0'} fill-black opacity-80"
+											name={item.name}
+										/>
 										<span class="text-xl font-medium">{item.name}</span>
 									</a>
 								{/each}
@@ -89,9 +107,13 @@
 			</div>
 			<div class="hidden lg:flex items-center gap-2">
 				{#each MenuItems as item}
+					{@const active = isItemActive(item.href)}
 					<a
-						class="px-4 py-2 rounded-2 text-3.6 font-medium transition-all ease-in-out duration-[500ms] select-none text-black dark:text-white hover:text-white hover:bg-black dark:text-white dark:hover:bg-white dark:hover:text-black"
-						href={item.href}>{item.name}</a
+						class="px-4 py-2 rounded-2 text-3.6 font-medium transition-all ease-in-out duration-300 select-none border {active
+							? 'bg-black text-white dark:bg-white dark:text-black font-semibold shadow-sm border-black/20 dark:border-white/20'
+							: 'border-transparent text-black dark:text-white hover:text-white hover:bg-black dark:hover:bg-white dark:hover:text-black'}"
+						href={item.href}
+						aria-current={active ? 'page' : undefined}>{item.name}</a
 					>
 				{/each}
 				<button
