@@ -18,13 +18,15 @@
 	<Heading {HeadingTitle} />
 	<div class="flex gap-8">
 		<a
-			class="Button Button-black dark:Button-white"
+			class="text-4.1 cursor-pointer font-500 no-underline select-none px-[18px] py-[6px] bg-black border-rounded-2 text-white border-[0.2px] border-black/40 hover:bg-white hover:text-black
+			dark:bg-white dark:text-black dark:border-white/60 dark:hover:bg-black dark:hover:text-white"
 			href={resolve('/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf')}
 			target="_blank"
 			type="file/pdf">View</a
 		>
 		<a
-			class="Button Button-black dark:Button-white"
+			class="text-4.1 cursor-pointer font-500 no-underline select-none px-[18px] py-[6px] bg-black border-rounded-2 text-white border-[0.2px] border-black/40 hover:bg-white hover:text-black
+			dark:bg-white dark:text-black dark:border-white/60 dark:hover:bg-black dark:hover:text-white"
 			href={resolve('/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf')}
 			target="_blank"
 			type="file/pdf"
@@ -45,36 +47,11 @@
 
 <style lang="scss">
 	.Resume {
-		.Button {
-			padding: 8px 14px;
+		a {
 			transition: 0.5s;
-			@apply border-[0.2px] rounded-2 text-4.1 cursor-pointer font-500 no-underline select-none;
 		}
 
-		.Button-white {
-			@apply bg-white border-white/45 text-black;
-		}
-
-		.Button-white:hover {
-			background: #000;
-			color: #fff;
-		}
-
-		.Button-white:focus {
-			color: rgb(0, 250, 250);
-			border-bottom: 0.5px solid rgb(0, 250, 250);
-		}
-
-		.Button-black {
-			@apply bg-black border-black/45 text-white;
-		}
-
-		.Button-black:hover {
-			background: #fff;
-			color: #000;
-		}
-
-		.Button-black:focus {
+		a:focus {
 			color: rgb(0, 250, 250);
 			border-bottom: 0.5px solid rgb(0, 250, 250);
 		}
