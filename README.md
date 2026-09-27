@@ -1,7 +1,7 @@
 # Personal Portfolio In Svelte 5
 
-![Portfolio Screenshot - Dark](/static/Screenshot-dark.png)
-![Portfolio Screenshot - Light](/static/Screenshot-light.png)
+![Portfolio Screenshot - Dark](/static/Screenshots/Screenshot-dark.png)
+![Portfolio Screenshot - Light](/static/Screenshots/Screenshot-light.png)
 
 An advanced personal portfolio website created using Sveltekit 5, UnoCSS, lenis, and a collection of other technologies. This website showcases my skills, projects and education with interactive 3d effects and light, dark mode.
 
@@ -11,7 +11,7 @@ Achieved 100% performance, SEO.
 
 Link - [PageSpeed](https://pagespeed.web.dev/analysis/https-abhijeetdhikale007-github-io/6edql5yzra?form_factor=desktop)
 
-![Page Insights Screenshot](/static/Page-Insights-Report.png)
+![Page Insights Screenshot](/static/Screenshots/Page-Insights-Report.png)
 
 ## Published from Google's Antigravity
 
