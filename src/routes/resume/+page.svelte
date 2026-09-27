@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { cubicIn } from 'svelte/easing';
 	import Heading from '$components/Heading.svelte';
-	import { resolve } from "$app/paths";
+	import { resolve } from '$app/paths';
 
 	let HeadingTitle = $state('Resume');
 </script>
@@ -18,14 +18,14 @@
 	<Heading {HeadingTitle} />
 	<div class="flex gap-8">
 		<a
-			class="Button-white"
-			href={resolve("/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf")}
+			class="Button Button-black dark:Button-white"
+			href={resolve('/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf')}
 			target="_blank"
 			type="file/pdf">View</a
 		>
 		<a
-			class="Button-white"
-			href={resolve("/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf")}
+			class="Button Button-black dark:Button-white"
+			href={resolve('/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf')}
 			target="_blank"
 			type="file/pdf"
 			download>Download</a
@@ -45,10 +45,14 @@
 
 <style lang="scss">
 	.Resume {
-		.Button-white {
+		.Button {
 			padding: 8px 14px;
 			transition: 0.5s;
-			@apply bg-white border-[0.2px] border-white/45 rounded-2 text-4.1 cursor-pointer text-black font-500 no-underline select-none;
+			@apply border-[0.2px] rounded-2 text-4.1 cursor-pointer font-500 no-underline select-none;
+		}
+
+		.Button-white {
+			@apply bg-white border-white/45 text-black;
 		}
 
 		.Button-white:hover {
@@ -57,6 +61,20 @@
 		}
 
 		.Button-white:focus {
+			color: rgb(0, 250, 250);
+			border-bottom: 0.5px solid rgb(0, 250, 250);
+		}
+
+		.Button-black {
+			@apply bg-black border-black/45 text-white;
+		}
+
+		.Button-black:hover {
+			background: #fff;
+			color: #000;
+		}
+
+		.Button-black:focus {
 			color: rgb(0, 250, 250);
 			border-bottom: 0.5px solid rgb(0, 250, 250);
 		}
