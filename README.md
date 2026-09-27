@@ -1,6 +1,7 @@
 # Personal Portfolio In Svelte 5
 
 ![Portfolio Screenshot - Dark](/static/Screenshots/Screenshot-dark.png)
+
 ![Portfolio Screenshot - Light](/static/Screenshots/Screenshot-light.png)
 
 An advanced personal portfolio website created using Sveltekit 5, UnoCSS, lenis, and a collection of other technologies. This website showcases my skills, projects and education with interactive 3d effects and light, dark mode.
