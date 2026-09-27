@@ -53,18 +53,15 @@
 		<nav class="flex items-center">
 			<div class="lg:hidden flex items-center gap-4">
 				<button
-					class="flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-white transition-all hover:bg-white hover:text-black focus:outline-none"
+					class="flex items-center justify-center w-10 h-10 rounded-xl bg-black text-white transition-all hover:bg-white hover:text-black focus:outline-none"
 					onclick={() => theme?.toggle()}
 					aria-label="Toggle Theme"
 				>
-					<Ico
-						class="w-5 h-5 flex-shrink-0 opacity-80"
-						name={theme?.mode === 'light' ? 'Sun' : 'Moon'}
-					/>
+					<Ico class="w-5 h-5 flex-shrink-0" name={theme?.mode === 'light' ? 'Sun' : 'Moon'} />
 				</button>
 				<button
-					class="flex justify-center items-center w-10 h-10 border-none bg-white text-black rounded-md transition-all hover:invert hover:text-black"
-					onclick={() => MenuHandler()}><Ico class="invert" name="Menu" /></button
+					class="flex justify-center items-center w-10 h-10 border-none bg-black text-white rounded-md transition-all hover:invert hover:text-black"
+					onclick={() => MenuHandler()}><Ico name="Menu" /></button
 				>
 				<!-- Nav Menu Vertical Screens -->
 				{#if isOpen}
