@@ -37,7 +37,7 @@
 		class="mt-6 mb-8 grow-1 shrink-1 w-[80vw] h-[56vh] md:w-[76vw] md:h-48 lg:w-[76vw] lg:h-[48vh] xl:w-[76vw] xl:h-[48vh] 2xl:w-[76vw] xl:h-[48vh]"
 	>
 		<iframe
-			class="w-full h-full border-black border-1 dark:border-white rounded-3"
+			class="w-full h-full border-black/60 border-1 dark:border-white/60 rounded-3"
 			src={resolve('/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf#view=FitH')}
 			title="Resume PDF"
 			loading="lazy"
