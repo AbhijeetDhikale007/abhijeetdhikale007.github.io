@@ -33,10 +33,14 @@ GitHub Pages - [abhijeetdhikale007.github.io](https://abhijeetdhikale007.github.
 
 ## Technologies Used
 
--   [Sveltekit 5](https://svelte.dev) - The main framework
--   [UnoCSS](https://unocss.dev) - Atomic CSS Engine
--   [Lenis](https://lenis.darkroom.engineering) - Smooth Scrolling
--   [SCSS](https://sass-lang.com) - Sassy Cascading Style Sheets.Popular CSS preprocessor Sass (Syntactically Awesome Style Sheets).
+-   [Sveltekit 5.55.2](https://svelte.dev) - The main framework
+-   [Sveltekit 2.57.0](https://svelte.dev/docs/kit) - Framework
+-   [Vite 7.3.1](https://vite.dev) - Web Build Tool
+-   [UnoCSS 66.6.8](https://unocss.dev) - Atomic CSS Engine
+-   [TypeScript 6.0.2](https://www.typescriptlang.org) - Typed Programming Language
+-   [Lenis 1.3.23](https://lenis.darkroom.engineering) - Smooth Scrolling
+-   [Iconify 5.2.1](https://icon-sets.iconify.design) - Icons
+-   [SCSS 0.2.4](https://sass-lang.com) - Sassy Cascading Style Sheets.Popular CSS preprocessor Sass (Syntactically Awesome Style Sheets).
 
 # sv
 
