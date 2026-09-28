@@ -15,7 +15,7 @@ export function createThemeState() {
         const stored = localStorage.getItem('theme') as ThemeMode;
         if (stored === 'light' || stored === 'dark') {
             mode = stored;
-        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
             mode = 'dark';
         }
     }
