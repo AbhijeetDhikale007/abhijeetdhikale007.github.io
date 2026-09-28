@@ -16,7 +16,7 @@ export function createThemeState() {
         if (stored === 'light' || stored === 'dark') {
             mode = stored;
         } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            mode = 'light';
+            mode = 'dark';
         }
     }
 
