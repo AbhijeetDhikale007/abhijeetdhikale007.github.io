@@ -8,9 +8,9 @@ An advanced personal portfolio website created using Sveltekit 5, UnoCSS, lenis,
 
 ## Page Speed Insights
 
-Achieved 100% performance, SEO.
+Achieved 100% score in performance, accessibilty, best practices, SEO and agentic browsing.
 
-Link - [PageSpeed](https://pagespeed.web.dev/analysis/https-abhijeetdhikale007-github-io/6edql5yzra?form_factor=desktop)
+Link - [PageSpeed](https://pagespeed.web.dev/analysis/https-abhijeetdhikale007-github-io/64ca1lnek7?form_factor=desktop)
 
 ![Page Insights Screenshot](/static/Screenshots/Page-Insights-Report.png)
 
