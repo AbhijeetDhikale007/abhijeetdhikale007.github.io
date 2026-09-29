@@ -26,7 +26,7 @@
 						</div>
 						<div>
 							<h2
-								class="text-nowrap py-2.5 px-3 mt-[-0.5vh] text-black dark:text-white text-base md:text-lg font-mono font-medium"
+								class="text-nowrap font-Roboto py-2.5 px-3 mt-[-0.5vh] text-black dark:text-white text-base md:text-lg font-mono font-medium"
 							>
 								{category.title}
 							</h2>
