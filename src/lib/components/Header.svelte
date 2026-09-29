@@ -38,6 +38,7 @@
 		<a
 			href="/"
 			class="flex items-center gap-4 no-underline group rounded-xl border-[0.1px] border-black/35 dark:border-white/35 overflow-hidden"
+			aria-label="Abhijeet Dhikale Home"
 		>
 			<div
 				class="flex items-center justify-center bg-black hover:bg-white dark:bg-white hover:dark:bg-black text-white hover:text-black dark:text-black dark:hover:text-white w-10 h-10 lg:w-12 lg:h-12 text-2xl lg:text-3xl font-bold transition-transform group-hover:scale-105 active:scale-95 select-none"
@@ -50,19 +51,23 @@
 				Λʙʜιנєєτ Ðʜικαℓє
 			</span>
 		</a>
-		<nav class="flex items-center">
+		<nav class="flex items-center" aria-label="Main Navigation">
 			<div class="lg:hidden flex items-center gap-4">
 				<button
-					class="flex items-center justify-center w-10 h-10 rounded-xl bg-black text-white transition-all hover:bg-white hover:text-black focus:outline-none"
+					class="flex items-center justify-center w-10 h-10 rounded-xl bg-black dark:bg-white text-white dark:text-black transition-all hover:opacity-80 focus:outline-none"
 					onclick={() => theme?.toggle()}
-					aria-label="Toggle Theme"
+					aria-label={theme?.mode === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
 				>
 					<Ico class="w-5 h-5 flex-shrink-0" name={theme?.mode === 'light' ? 'Sun' : 'Moon'} />
 				</button>
 				<button
-					class="flex justify-center items-center w-10 h-10 border-none bg-black text-white rounded-md transition-all hover:invert hover:text-black"
-					onclick={() => MenuHandler()}><Ico name="Menu" /></button
+					class="flex justify-center items-center w-10 h-10 border-none bg-black dark:bg-white text-white dark:text-black rounded-md transition-all hover:opacity-80"
+					onclick={() => MenuHandler()}
+					aria-label="Toggle Navigation Menu"
+					aria-expanded={isOpen}
 				>
+					<Ico name="Menu" />
+				</button>
 				<!-- Nav Menu Vertical Screens -->
 				{#if isOpen}
 					<div
@@ -93,8 +98,9 @@
 							</div>
 
 							<button
-								class="mt-10 mx-auto w-14 h-14 flex items-center justify-center bg-white text-black rounded-full hover:scale-110 active:scale-90 transition-transform shadow-xl"
+								class="mt-10 mx-auto w-14 h-14 flex items-center justify-center bg-black dark:bg-white text-white dark:text-black rounded-full hover:scale-110 active:scale-90 transition-transform shadow-xl"
 								onclick={() => (isOpen = false)}
+								aria-label="Close Navigation Menu"
 							>
 								<Ico class="w-6 h-6" name="Close" />
 							</button>
@@ -116,7 +122,7 @@
 				<button
 					class="flex items-center justify-center w-10 h-10 rounded-xl ml-2 bg-black/90 dark:bg-white text-white dark:text-black hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white transition-colors focus:outline-none"
 					onclick={() => theme?.toggle()}
-					aria-label="Toggle Theme"
+					aria-label={theme?.mode === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
 				>
 					<Ico
 						class="w-5 h-5 opacity-90 group-hover:opacity-100"

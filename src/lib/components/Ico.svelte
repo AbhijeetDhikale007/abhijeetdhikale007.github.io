@@ -21,6 +21,8 @@
 		width="100%"
 		height="100%"
 		viewBox={displayIcon.viewBox}
+		aria-hidden="true"
+		focusable="false"
 		{...restProps}
 	>
 		{@html displayIcon.svg}

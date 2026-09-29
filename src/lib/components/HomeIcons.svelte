@@ -16,7 +16,8 @@
 			<a
 				href={link.href}
 				class="Tooltip dark:invert"
-				data-title={link.name}
+				data-title={link.name === 'GitHubW' ? 'GitHub' : link.name}
+				aria-label={link.name === 'GitHubW' ? 'GitHub Profile' : `${link.name} Profile`}
 				target="_blank"
 				rel="noopener noreferrer"
 			>

@@ -22,14 +22,18 @@
 			dark:bg-white dark:text-black dark:border-white/60 dark:hover:bg-black dark:hover:text-white"
 			href={resolve('/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf')}
 			target="_blank"
-			type="file/pdf">View</a
+			rel="noopener noreferrer"
+			aria-label="View Resume PDF"
+			type="application/pdf">View</a
 		>
 		<a
 			class="text-4.1 cursor-pointer font-500 no-underline select-none px-[18px] py-[6px] bg-black border-rounded-2 text-white border-[0.2px] border-black/40 hover:bg-white hover:text-black
 			dark:bg-white dark:text-black dark:border-white/60 dark:hover:bg-black dark:hover:text-white"
 			href={resolve('/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf')}
 			target="_blank"
-			type="file/pdf"
+			rel="noopener noreferrer"
+			aria-label="Download Resume PDF"
+			type="application/pdf"
 			download>Download</a
 		>
 	</div>
@@ -39,7 +43,7 @@
 		<iframe
 			class="w-full h-full border-black/60 border-1 dark:border-white/60 rounded-3"
 			src={resolve('/Documents/Abhijeet-Prakash-Dhikale-Resume.pdf#view=FitH')}
-			title="Resume PDF"
+			title="Abhijeet Dhikale Resume Document PDF"
 			loading="lazy"
 		></iframe>
 	</div>

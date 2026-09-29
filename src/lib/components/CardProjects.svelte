@@ -40,16 +40,20 @@
 				<a
 					class="Tooltip w-8 h-8 p-1.2 flex content-center border-1 border-black/40 hover:border-black dark:border-white/40 dark:hover:border-black rounded-2 transition-all bg-black hover:bg-black hover:invert dark:bg-black dark:invert dark:hover:invert-0"
 					data-title="GitHub"
+					aria-label="GitHub Repository for {project.Title}"
 					href={project.urlGit}
 					target="_blank"
+					rel="noopener noreferrer"
 				>
 					<Ico name="GitHubW" />
 				</a>
 				<a
 					class="Tooltip w-8 h-8 p-1.2 flex content-center border-1 border-white/40 hover:border-black dark:hover:border-black rounded-2 transition-all bg-black hover:bg-black hover:invert dark:bg-black dark:invert dark:hover:invert-0"
 					data-title="Deployment"
+					aria-label="Live Deployment for {project.Title}"
 					href={project.urlDeploy}
 					target="_blank"
+					rel="noopener noreferrer"
 				>
 					<Ico name="Link" />
 				</a>
@@ -58,18 +62,18 @@
 		<hr />
 		<div class="flex gap-3 items-center w-full font-medium text-sm">
 			<Ico name="Project" class="invert dark:invert-0 h-6 w-6" />
-			<h4>{project.Type}</h4>
+			<p>{project.Type}</p>
 		</div>
 		<hr />
 		<div class="flex gap-3 items-center w-full font-medium text-sm">
 			<Ico name="Time" class="invert dark:invert-0 h-6 w-6" />
-			<h4>{project.Duration}</h4>
+			<p>{project.Duration}</p>
 		</div>
 		<hr />
 		<div class="flex flex-grow flex-shrink py-2 min-h-[14vh]">
-			<h4 class="text-sm leading-relaxed text-justify m-0 opacity-80 font-light">
+			<p class="text-sm leading-relaxed text-justify m-0 text-black/90 dark:text-white/90 font-light">
 				{project.Details}
-			</h4>
+			</p>
 		</div>
 		<div class="flex justify-between items-center w-full text-xs font-semibold">
 			<div class="px-3 py-2 border-1 border-black/25 dark:border-white/20 rounded-full">
