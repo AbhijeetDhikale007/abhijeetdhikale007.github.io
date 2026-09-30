@@ -2,6 +2,7 @@
 	import { Project } from '$data/Projects';
 	import Ico from '$components/Ico.svelte';
 	import VanillaTilt from 'vanilla-tilt';
+	import { resolve } from '$app/paths';
 
 	function tilt(node: HTMLElement) {
 		VanillaTilt.init(node, {
@@ -31,8 +32,30 @@
 		class="border-1 border-black/40 hover:border-black dark:border-white/40 dark:hover:border-white w-full max-w-[400px] lg:w-[30vw] xl:w-[26vw] bg-transparent flex flex-wrap flex-col gap-y-3 rounded-xl p-6 transition-colors"
 		use:tilt
 	>
-		<div class="w-full">
-			<Ico class="w-15 h-15" name={project.Logo} />
+		<!-- Preview Image Container with Logo positioned at bottom left -->
+		<div
+			class="relative w-full rounded-lg overflow-hidden border border-black/20 dark:border-white/20 group select-none"
+		>
+			{#if project.imgUrl}
+				<img
+					src={resolve('/' + project.imgUrl)}
+					alt={`${project.Title} preview`}
+					class="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-95 select-none"
+				/>
+			{:else}
+				<div class="w-full h-full bg-black/5 dark:bg-white/10 flex items-center justify-center">
+					<span
+						class="text-xs uppercase tracking-widest font-semibold text-black/50 dark:text-white/50"
+						>{project.Title}</span
+					>
+				</div>
+			{/if}
+
+			<!-- Project Logo on Preview Image (Bottom Left Position) -->
+			<Ico
+				class="w-9 h-9 absolute bottom-1 left-1 p-.5 rounded-md flex items-center justify-center z-2"
+				name={project.Logo}
+			/>
 		</div>
 		<div class="flex justify-between items-center w-full">
 			<h2 class="text-2xl font-semibold">{project.Title}</h2>
@@ -71,7 +94,9 @@
 		</div>
 		<hr />
 		<div class="flex flex-grow flex-shrink py-2 min-h-[14vh]">
-			<p class="text-sm leading-relaxed text-justify m-0 text-black/90 dark:text-white/90 font-light">
+			<p
+				class="text-sm leading-relaxed text-justify m-0 text-black/90 dark:text-white/90 font-light"
+			>
 				{project.Details}
 			</p>
 		</div>
